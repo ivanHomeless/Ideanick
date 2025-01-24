@@ -15,7 +15,7 @@ import { type EditIdeaRouteParams, getViewIdeaRoute } from '../../lib/routes'
 import { trpc } from '../../lib/trpc'
 
 const EditIdeaComponent = ({ idea }: { idea: NonNullable<TrpcRouterOutput['getIdea']['idea']> }) => {
-  const navigate = useNavigate()
+  const navigate = useNavigate() // test
   const [submittingError, setSubmittingError] = useState<string | null>(null)
   const updateIdea = trpc.updateIdea.useMutation()
   const formik = useFormik({
